@@ -44,7 +44,7 @@ exports.createOne = Model => catchAsync(async(req, res, next) => {
 
     res.status(200).json({ status : 'success', data : { doc }});});
 
-
+// comment
 exports.getOne = (Model, popOptions) => catchAsync(async (req, res, next) => {
     let query = Model.findById(req.params.id);
     if(popOptions) query = query.populate(popOptions);
