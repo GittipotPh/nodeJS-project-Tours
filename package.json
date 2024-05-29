@@ -5,13 +5,15 @@
   "main": "index.js",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
     "start:dev": "nodemon server.js",
     "start:prod": "cross-env NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js ",
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
     "build": "parcel build ./public/js/index.js --target node --bundle-node-modules --out-dir ./public/js --out-file bundle.js",
-    "start": "parcel start ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "starts": "parcel start ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "Gittipot",
   "license": "ISC",
