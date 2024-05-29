@@ -26360,7 +26360,7 @@ const login = async (email, password) => {
   try {
     const res = await (0, _axios.default)({
       method: 'POST',
-      url: 'http://127.0.0.1:3000/api/v1/users/login',
+      url: '/api/v1/users/login',
       data: {
         email,
         password
@@ -26429,7 +26429,7 @@ const logout = async () => {
   try {
     const res = await (0, _axios.default)({
       method: 'GET',
-      url: 'http://127.0.0.1:3000/api/v1/users/logout'
+      url: '/api/v1/users/logout'
     });
     if (res.data.status === 'success') {
       location.reload(true);
@@ -26478,7 +26478,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // type is either 'password' or 'data'
 const updateSettings = async (data, type) => {
   try {
-    const url = type === 'password' ? 'http://127.0.0.1:3000/api/v1/users/updateMyPassword' : 'http://127.0.0.1:3000/api/v1/users/updateMe';
+    const url = type === 'password' ? '/api/v1/users/updateMyPassword' : '/api/v1/users/updateMe';
     const res = await (0, _axios.default)({
       method: 'PATCH',
       url,
@@ -26797,7 +26797,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54267" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57393" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
